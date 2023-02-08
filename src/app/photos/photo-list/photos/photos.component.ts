@@ -10,6 +10,7 @@ export class PhotosComponent implements OnChanges {
 
   @Input() photos: Photo[] = [];
   rows: any[] = [];
+  
   constructor() { }
 
 
