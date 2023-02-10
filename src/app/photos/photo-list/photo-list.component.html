@@ -1,15 +1,8 @@
-<div class="text-center mt-3 mb-3">
-    <form>
-        <input 
-            class="rounded" 
-            type="search" 
-            placeholder="search..." 
-            autofocus 
-            (keyup)="debounce.next($event.target.value)">
-            <!--(keyup)="filter = $event.target.value">  event bind atribui em filter o event sem precisar utilizar funções --> 
-    </form>
-</div>
+<ap-search 
+    (onTyping)="filter = $event">
+</ap-search>
 
+<ap-photos [photos]="photos | filterByDescription: filter"> </ap-photos>
+<!-- criando nosso proprio pipe | inserindo photos dentro de filterByDescription: filter passando filter como outra propriedade-->
 
-<ap-photos [photos]="photos | filterByDescription: filter"> </ap-photos> <!-- criando nosso proprio pipe | inserindo photos dentro de filterByDescription: filter passando filter como outra propriedade-->
 <ap-load-button (click)="load()" [hasMore]="hasMore"></ap-load-button>
