@@ -6,7 +6,9 @@
             type="search" 
             placeholder="search..." 
             autofocus 
-            (keyup)="debounce.next($event.target.value)">
-            <!--(keyup)="filter = $event.target.value">  event bind atribui em filter o event sem precisar utilizar funções --> 
+            (keyup)="debounce.next($event.target.value)"
+            [value]='value'
+            >
+            <!--(keyup)="filter = $event.target.value">  event bind atribui em filter o event sem precisar utilizar funções -->           
     </form>
 </div>

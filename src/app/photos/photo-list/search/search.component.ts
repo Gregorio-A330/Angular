@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnDestroy, OnInit, Output } from "@angular/core";
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from "@angular/core";
 import { Subject } from "rxjs";
 import { debounceTime } from "rxjs/operators";
 
@@ -10,7 +10,9 @@ import { debounceTime } from "rxjs/operators";
 export class SearchComponent implements OnInit, OnDestroy {
 
   @Output() onTyping: EventEmitter<string>= new EventEmitter<string>();
+  @Input() value: string = '';
   debounce: Subject<string> = new Subject<string>();
+
 
   ngOnInit(): void {
     this.debounce

@@ -33,6 +33,7 @@ export class PhotoListComponent implements OnInit {
 
   load(){
     this.photoservice.listFromUserPaginated(this.userName, ++this.currentPage).subscribe(photos => {
+      this.filter = ''
       this.photos = this.photos.concat(photos); //o Angular só detecta numa inbound property que ela mudou quando há uma nova atribuição a ela por isso utiliza-se o concat ao inves do push
       if(!photos.length){
         this.hasMore = false;
