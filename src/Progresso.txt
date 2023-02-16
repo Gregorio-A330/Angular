@@ -1,0 +1,8 @@
+Angular parte 2: Autenticação, Forms e lazy loading
+
+   Aula 02 - Autenticação e o papel do token
+
+    * como acessar o header de resposta;
+    * armazenamento de token;
+    * a segurança do token;
+    * cabeçalho da nossa aplicação.
