@@ -1,8 +1,27 @@
 Angular parte 2: Autenticação, Forms e lazy loading
 
-   Aula 02 - Autenticação e o papel do token
+    Aula 01 - O componente para login
+
+    * criação de um componente de login;
+    * validação de formulário;
+    * como componentizar mensagens de validação;
+    * como enviar crendenciais para a API;
+    * como redirecionar e obter referências do template (ViewChild);
+    * descobrindo a plataforma de execução.
+
+
+    Aula 02 - Autenticação e o papel do token
 
     * como acessar o header de resposta;
     * armazenamento de token;
     * a segurança do token;
     * cabeçalho da nossa aplicação.
+
+
+    Aula 03 - Usuário logado e proteção de rotas
+
+    * como separar responsabilidades;
+    * qual o papel do BehaviorSubject;
+    * utilização do Async pipe;
+    * a implementação do logout;
+    * a diretiva routerLink.   
