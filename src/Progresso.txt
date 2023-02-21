@@ -25,3 +25,12 @@ Angular parte 2: Autenticação, Forms e lazy loading
     * utilização do Async pipe;
     * a implementação do logout;
     * a diretiva routerLink.   
+
+
+    Aula 04 - Registro de novos usuários
+
+    * criação de um componente de registro;
+    * validação de formulário de registro;
+    * como criar nosso próprio validador;
+    * validando de maneira assíncrona;
+    * submissão de dados.
