@@ -9,7 +9,8 @@ import { UserNotTakenValidatorService } from "./user-not-taken.validator.service
 
 
 @Component({
-    templateUrl: './signup.component.html'
+    templateUrl: './signup.component.html',
+    providers: [UserNotTakenValidatorService] //quando alguem pedir pra injetar este item, o signup component vai providenciar o USERNOTTAKEN...SERVICE
 })
 export class SignUpComponent implements OnInit {
 

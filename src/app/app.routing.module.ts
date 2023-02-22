@@ -1,12 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { Routes } from '@angular/router';
-import { AuthGuard } from './core/auth/auth.guard';
+import { Routes, RouterModule } from '@angular/router';
+// import { AuthGuard } from './core/auth/auth.guard';
+
 import { NotFoundComponent } from './errors/not-found/not-found.component';
-import { HomeComponent } from './home/home.component';
-import { SignInComponent } from './home/signin/signin.component';
-import { SignUpComponent } from './home/signup/signup.component';
 
 import { PhotoFormComponent } from './photos/photo-form/photo-form.component';
 import { PhotoListComponent } from './photos/photo-list/photo-list.component';
@@ -21,23 +18,16 @@ const routes: Routes = [
     //     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
     //   },
 
-    //versões mais antigas do Angular
-    { 
-        path: '', 
-        component: HomeComponent,
-        canActivate: [ AuthGuard ],
-        children: [
-            { 
-                path: '', 
-                component: SignInComponent,
-            },
-            { 
-                path: 'signup', 
-                component: SignUpComponent,
-            },
-        ]
+    {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'home'
     },
-
+        //versões mais antigas do Angular
+    {
+        path: 'home',
+        loadChildren: './home/home.module#HomeModule'
+    },
     {
         path: 'user/:userName', 
         component: PhotoListComponent,
@@ -64,3 +54,7 @@ export class AppRoutingModule {
 //Angular tem restrição de deixar apenas as duas ultimas versões de navegadores de forma compativel, abaixo disso, não garante o devido funcionamento da aplicação
 
 //useHash: true -> força a alteração de rotas sem realizar requisição para o back-end, alguns tipos de servidores de hosteamento não estão preparados para o roteamento do Angular e incluindo esta linha habilita o /#/ nas rotas
+
+
+
+//lazy loading -> cria-se um arquivo de roteamento no proprio modulo 

@@ -4,7 +4,8 @@ import { NewUser } from "./new-user";
 
 const API_URL = 'http://localhost:3000'
 
-@Injectable({providedIn: 'root'}) //unica instancia pra aplicação toda
+// @Injectable({providedIn: 'root'}) //unica instancia pra aplicação toda
+@Injectable() //unica instancia pra aplicação toda
 export class SignUpService {
 
     constructor(private http: HttpClient){}

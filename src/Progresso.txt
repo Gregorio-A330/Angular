@@ -34,3 +34,11 @@ Angular parte 2: Autenticação, Forms e lazy loading
     * como criar nosso próprio validador;
     * validando de maneira assíncrona;
     * submissão de dados.
+    
+
+    Aula 05 - Rotas filhas e lazy loading
+
+    * rotas filhas;
+    * como buildar o projeto;
+    * Lazy loading e code splitting;
+    * interceptadores e envio de token.

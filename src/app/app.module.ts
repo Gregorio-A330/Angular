@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { PhotosModule } from './photos/photos.module';
 import { AppRoutingModule } from './app.routing.module';
 import { ErrorsModule } from './errors/errors.module';
-import { HomeModule } from './home/home.module';
+// import { HomeModule } from './home/home.module';
 import { CoreModule } from './core/core.module';
 
 
@@ -16,12 +16,14 @@ import { CoreModule } from './core/core.module';
   imports: [
     BrowserModule,
     PhotosModule,
-    AppRoutingModule,
     ErrorsModule,
-    HomeModule,
-    CoreModule
+    // HomeModule,
+    CoreModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+//um modulo que quer ser carregado de forma preguiçosa (lazyLoading) ele não pode ficar dentro dos imports do app module
